@@ -43,13 +43,16 @@ const ProductDetail = () => {
   const addToCarts = (cart) => {
     dispatch(setCart(cart));
   }
+  console.log(data.product_image)
+
 
   return (
     <>
       <div className='grid grid-cols-3 px-5 py-7 gap-10'>
         <div>
           <Image
-            src={`${baseUrl}${data.product_image}`}
+            src={`${data.product_image}`}
+
             fallback={<Shimmer height={300} width={400} duration={4} />}
           />
 

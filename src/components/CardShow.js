@@ -24,7 +24,8 @@ const CardShow = ({ product }) => {
     <Card onClick={() => nav(`/product/${product._id}`)} className="w-full max-w-[26rem] shadow-lg cursor-pointer">
       <CardHeader floated={false} color="blue-gray">
         <Image
-          src={`${baseUrl}${product.product_image}`}
+          // src={`${baseUrl}${product.product_image}`}
+          src={`${product.product_image}`}
           fallback={<Shimmer height={200} width={400} duration={4} />}
         />
 

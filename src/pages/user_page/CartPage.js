@@ -13,6 +13,7 @@ const CartPage = () => {
   const dispatch = useDispatch();
 
   const total = carts.reduce((acc, item) => acc + item.price * item.qty, 0);
+  console.log(carts)
 
   return (
     <div>
@@ -26,7 +27,9 @@ const CartPage = () => {
           {carts.map((cart, index) => {
             return <div className='grid grid-cols-5 gap-4 items-center' key={cart.product}>
               <Image
-                src={`${baseUrl}${cart.image}`}
+                // src={`${baseUrl}${cart.image}`}
+                src={`assets/${cart.image}`}
+
                 fallback={<Shimmer height={100} width={150} duration={4} />}
               />
 
